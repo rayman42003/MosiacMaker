@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace MosiacMaker
 {
@@ -10,6 +7,14 @@ namespace MosiacMaker
     {
         static void Main(string[] args)
         {
+            System.Console.WriteLine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
+            string filename = @"E:\Dev\Projects\MosaicMaker\Example.jpg";
+            ImgLoader loader = new FileImgLoader(filename);
+            Image img = loader.Load();
+
+            Application.Run(new MosaicForm(img));
+
+            System.Console.ReadKey();
         }
     }
 }
