@@ -14,8 +14,8 @@ namespace MosiacMaker
             ImgLoader loader = new FileImgLoader(filename);
             Image img = loader.Load();
 
-            Sampler s = new AvgSampler();
-            Mosiac m = new Mosiac(img);
+            Sampler s = new QuantizationSampler(5);
+            Mosiac m = new Mosiac(img, PATCH_SIZE);
             m.Test(s);
             Application.Run(new MosaicForm(m.Img));
         }
