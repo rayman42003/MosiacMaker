@@ -11,7 +11,7 @@ namespace MosiacMaker
         public MosaicForm(Image img)
         {
             this.components = new Container();
-            this.Size = new Size(img.Width, img.Height);
+            this.Size = new Size(img.Width+17, img.Height+40); // TODO: Fix to be generic
             this.Text = "Mosaic";
             this.img = img;
         }
@@ -19,7 +19,7 @@ namespace MosiacMaker
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            g.DrawImage(img, ClientRectangle);
+            g.DrawImageUnscaled(img, ClientRectangle);
         }
     }
 }

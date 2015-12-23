@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Img\AvgSampler.cs" />
+    <Compile Include="Img\ColorBucket.cs" />
     <Compile Include="Img\ColorCube.cs" />
     <Compile Include="Img\Mosiac.cs" />
     <Compile Include="Img\Patch.cs" />

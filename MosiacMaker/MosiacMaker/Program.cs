@@ -6,7 +6,7 @@ namespace MosiacMaker
 {
     class Program
     {
-        const int PATCH_SIZE = 64;
+        const int PATCH_SIZE = 16;
         static void Main(string[] args)
         {
             System.Console.WriteLine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
